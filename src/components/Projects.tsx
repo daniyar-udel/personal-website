@@ -6,7 +6,7 @@ const projects = [
       "Allergy-aware walking route planner for New York City. Ranks routes by pollen exposure using NYC street tree census data, real-time weather/wind, and Gemini 2.5 Flash for natural-language explanations. Supports voice input and audio route summaries.",
     tech: ["Next.js", "TypeScript", "Gemini 2.5 Flash", "Google Maps API", "Docker", "Cloud Run"],
     github: "https://github.com/daniyar-udel/treeroute",
-    live: null,
+    live: "https://treeroute-501252220143.us-central1.run.app/",
     badge: "🏆 1st Place",
   },
   {
@@ -26,7 +26,7 @@ const projects = [
       "Personalized investment strategy engine. Classifies risk profiles, detects market regimes via KMeans clustering, runs 10,000 Monte Carlo simulations for goal-probability estimates, and offers a LangGraph-powered AI copilot for follow-up questions.",
     tech: ["FastAPI", "LangGraph", "LangChain", "scikit-learn", "React", "Docker"],
     github: "https://github.com/daniyar-udel/Financial-Planning-Advisor",
-    live: null,
+    live: "https://vivacious-imagination-production-f472.up.railway.app",
     badge: null,
   },
 ];

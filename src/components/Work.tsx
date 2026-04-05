@@ -12,7 +12,7 @@ const jobs = [
     ],
   },
   {
-    company: "FinTech Company",
+    company: "Bank CenterCredit",
     role: "Machine Learning Engineer",
     period: "Dec 2022 – Aug 2024",
     location: "Almaty, Kazakhstan",

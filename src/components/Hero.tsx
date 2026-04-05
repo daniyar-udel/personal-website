@@ -80,12 +80,19 @@ export default function Hero() {
             ML / AI ENGINEER
           </div>
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
-            I don&apos;t just prototype AI — I ship it to production with
-            measurable impact. Multi-agent systems, RAG pipelines, full-stack
-            LLM products.{" "}
-            <span className="text-green-400 font-medium">Google Hackathon Winner</span>{" "}
-            | 2+ yrs FinTech ML | M.S. @ UDel | Open to full-time roles.
+          <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-sm">
+            I build AI that ships and scales — not portfolio demos. Multi-agent
+            LLM systems and production RAG pipelines, built and deployed.{" "}
+            <span className="text-green-400 font-semibold">Google AI Hackathon Winner</span>
+            <br />
+            M.S. Data Science @ University of Delaware, graduating May&nbsp;2026.
+            <br />
+            <span className="text-white/60 text-xs mt-2 block">
+              Actively looking for:{" "}
+              <span className="text-green-400 font-semibold">
+                ML Engineer | AI Engineer | Data Scientist
+              </span>
+            </span>
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
