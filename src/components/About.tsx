@@ -47,7 +47,7 @@ export default function About() {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-56 h-56 rounded-2xl overflow-hidden shadow-lg ring-4 ring-green-100">
               <Image
-                src="/profile.png"
+                src="/about-photo.png"
                 alt="Daniyar Abykhanov"
                 fill
                 className="object-cover object-top"

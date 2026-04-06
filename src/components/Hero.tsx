@@ -6,6 +6,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 const ROLES = ["ML Engineer", "AI Engineer", "Data Scientist", "LLM Builder"];
 
 const PHOTOS = [
+  { src: "/profile2.png", caption: "Daniyar Abykhanov — ML/AI Engineer" },
   { src: "/hackathon/team.png", caption: "Team TreeRoute @ NYU Tandon" },
   { src: "/hackathon/presentation.png", caption: "Presenting our architecture to the audience" },
   { src: "/hackathon/group1.png", caption: "Google Build With AI Hackathon 2026" },
