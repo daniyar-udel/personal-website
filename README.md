@@ -1,4 +1,4 @@
-# Personal Website — Daniyar Abykhanov
+# Personal Website — Daniyar (Danny) Abykhanov
 
 Live: [personal-website-nu-three-23.vercel.app](https://personal-website-nu-three-23.vercel.app)
 
