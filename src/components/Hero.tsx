@@ -101,7 +101,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href="https://drive.google.com/file/d/1klg1gomYqvfe5h2dxIAGG58IbPVx_yow/view?usp=sharing"
+              href="https://drive.google.com/file/d/1hc7Q2OBOTpZDukVgrPHLFYMy1zxk9JG9/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 border border-white/25 text-white/80 text-sm font-semibold rounded-full hover:border-green-400 hover:text-green-400 transition-colors"
