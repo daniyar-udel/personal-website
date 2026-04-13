@@ -36,7 +36,7 @@ export default function Contact() {
         </p>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in touch</h2>
         <p className="text-gray-500 mb-12 max-w-lg">
-          Open to ML Engineer, AI Engineer, and Data Scientist roles. Feel free to reach out — I&apos;ll get back to you quickly.
+          Feel free to reach out — I&apos;ll get back to you quickly.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -133,12 +133,6 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-4 bg-green-50 rounded-xl">
-              <p className="text-sm text-green-800 font-medium mb-1">Currently available</p>
-              <p className="text-xs text-green-600">
-                Graduating May 2026 · Open to full-time ML/AI Engineer roles
-              </p>
-            </div>
           </div>
         </div>
       </div>

@@ -67,7 +67,6 @@ export default function About() {
               "🎓 M.S. Data Science — University of Delaware, GPA 3.7",
               "💼 2+ years production ML at FinTech",
               "🔬 Research Assistant — climate ML with PyTorch Geometric",
-              "🚀 Open to ML Engineer / AI Engineer / Data Scientist roles",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2 text-gray-700 text-sm">
                 <span>{item}</span>

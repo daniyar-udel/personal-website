@@ -88,12 +88,6 @@ export default function Hero() {
             <br />
             M.S. Data Science @ University of Delaware, graduating May&nbsp;2026.
             <br />
-            <span className="text-white/60 text-xs mt-2 block">
-              Actively looking for:{" "}
-              <span className="text-green-400 font-semibold">
-                ML Engineer | AI Engineer | Data Scientist
-              </span>
-            </span>
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
