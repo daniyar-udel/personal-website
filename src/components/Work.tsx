@@ -1,14 +1,26 @@
 const jobs = [
   {
+    company: "TreeRoute",
+    role: "Technical Co-Founder",
+    period: "Mar 2026 – Present",
+    location: "New York / Remote",
+    current: true,
+    bullets: [
+      "Won Google Build With AI Hackathon 2026 at NYU Tandon and continued development of the winning route-planning product into a production-ready AI application.",
+      "Built a Gemini 2.5 Flash agent with tool-calling across 4 real-time APIs (Maps, Routes, Pollen, Weather) and integrated NYC tree census data for grounded recommendations.",
+      "Led end-to-end AI product development, owning agent architecture, backend infrastructure, and production integration.",
+    ],
+  },
+  {
     company: "University of Delaware",
     role: "Research Assistant",
     period: "Aug 2024 – Present",
     location: "Newark, Delaware",
     current: true,
     bullets: [
-      "Delivered 22% lower RMSE on held-out regions by building a GAT/GATv2 imputation pipeline in PyTorch Geometric for CMIP-style spatio-temporal climate data.",
-      "Improved prediction quality by 27% (CE: 0.62 → 0.79) over GCN/GraphConv baselines across random, shared, and ensemble missingness regimes.",
-      "Reduced seed-to-seed variance by 35% under 30–70% missingness by adding elevation, land/ocean features, and seasonal normalization.",
+      "Developed and optimized a distance-aware GATv2 imputation pipeline in PyTorch Geometric for CMIP6 climate data, achieving 62% lower RMSE vs kriging (0.144K vs 0.378K) across 2,664 grid cells.",
+      "Ran ablation experiments across 9 GATv2 architectures, narrowing the gap to GraphEM to 1% and identifying land-ocean features and multi-head attention as the most impactful design choices.",
+      "Optimized GPU inference to reduce runtime from 3,745s to 1.06s per ensemble, enabling near-real-time climate reconstruction.",
     ],
   },
   {
@@ -31,7 +43,8 @@ const jobs = [
     location: "Almaty, Kazakhstan",
     current: false,
     bullets: [
-      "Built a customer profiling dataset in SQL by joining production tables and engineering segmentation features used for more targeted marketing campaigns.",
+      "Built a decision tree model on 120K+ customer records to identify the top 5 drivers of churn, informing retention actions that reduced customer churn by 8%.",
+      "Built customer profiling datasets in SQL by joining production tables and engineering segmentation features for targeted marketing campaigns.",
     ],
   },
 ];
