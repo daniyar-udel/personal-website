@@ -84,7 +84,7 @@ export default function Hero() {
           <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-sm">
             I build AI that ships and scales — not portfolio demos. Multi-agent
             LLM systems and production RAG pipelines, built and deployed.{" "}
-            <span className="text-green-400 font-semibold">Google AI Hackathon Winner</span>
+            <span className="text-green-400 font-semibold">2x AI Hackathon Winner</span>
             <br />
             M.S. Data Science @ University of Delaware, graduating May&nbsp;2026.
             <br />

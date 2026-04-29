@@ -32,8 +32,10 @@ export default function About() {
             <p className="text-gray-600 leading-relaxed mb-4">
               Pursuing an M.S. in Data Science at the{" "}
               <span className="font-semibold text-gray-800">University of Delaware</span> (GPA 3.7,
-              graduating May 2026). Previously a Machine Learning Engineer in FinTech — owned
-              end-to-end ML product delivery from credit scoring to LLM-powered internal tools.
+              graduating May 2026). 3+ years shipping production ML — from credit scoring and Voice AI
+              at a Central Asian bank to co-founding{" "}
+              <span className="font-semibold text-gray-800">TreeRoute</span> after winning Google
+              Build With AI 2026, and winning Enterprise Agent Jam NYC with LeadGuard.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Stack:{" "}
@@ -63,9 +65,9 @@ export default function About() {
           </p>
           <ul className="grid sm:grid-cols-2 gap-2">
             {[
-              "🏆 Google Build With AI Hackathon 2026 Winner @ NYU Tandon",
+              "🏆 2x AI Hackathon Winner — Google Build With AI 2026 & Enterprise Agent Jam NYC",
               "🎓 M.S. Data Science — University of Delaware, GPA 3.7",
-              "💼 2+ years production ML at FinTech",
+              "💼 3+ years shipping production ML and agentic AI systems",
               "🔬 Research Assistant — climate ML with PyTorch Geometric",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2 text-gray-700 text-sm">

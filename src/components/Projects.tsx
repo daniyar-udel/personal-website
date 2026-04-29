@@ -2,6 +2,17 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "LeadGuard",
+    tagline: "Hackathon Winner — Enterprise Agent Jam NYC (Veris AI)",
+    description:
+      "AI inbox-triage agent that classifies inbound leads by urgency and revenue impact, enriches senders via You.com, drafts personalized replies, and triggers VoiceRun calls for P0 leads — fully automated lead qualification pipeline.",
+    tech: ["Python", "FastAPI", "LangGraph", "You.com API", "VoiceRun", "Claude"],
+    github: "https://github.com/daniyar-udel/leadguard",
+    live: null,
+    badge: "🏆 1st Place",
+    image: "/projects/leadguard.png",
+  },
+  {
     title: "TreeRoute",
     tagline: "Hackathon Winner — Google Build With AI 2026",
     description:

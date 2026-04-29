@@ -6,9 +6,9 @@ const jobs = [
     location: "New York / Remote",
     current: true,
     bullets: [
-      "Won Google Build With AI Hackathon 2026 at NYU Tandon and continued development of the winning route-planning product into a production-ready AI application.",
-      "Built a Gemini 2.5 Flash agent with tool-calling across 4 real-time APIs (Maps, Routes, Pollen, Weather) and integrated NYC tree census data for grounded recommendations.",
-      "Led end-to-end AI product development, owning agent architecture, backend infrastructure, and production integration.",
+      "Shipped a production AI application in 18 hours - won Google Build With AI Hackathon 2026 at NYU Tandon (150 teams, 600 participants) and co-founded TreeRoute from the winning prototype.",
+      "Built a Gemini 2.5 Flash agentic pipeline using Google ADK and GenAI SDK, accelerated with Claude Code and Codex; grounded recommendations on 700K+ NYC tree records with real-time tool-calling across Maps, Routes, Pollen, and Weather.",
+      "Achieved sub-2-second response times in production by designing agent architecture and deploying backend on Google Cloud.",
     ],
   },
   {
@@ -18,9 +18,9 @@ const jobs = [
     location: "Newark, Delaware",
     current: true,
     bullets: [
-      "Developed and optimized a distance-aware GATv2 imputation pipeline in PyTorch Geometric for CMIP6 climate data, achieving 62% lower RMSE vs kriging (0.144K vs 0.378K) across 2,664 grid cells.",
+      "Cut GPU inference runtime from 3,745s to 1.06s per ensemble (3,500x speedup), enabling near-real-time climate reconstruction.",
+      "Achieved 62% lower RMSE vs kriging (0.144K vs 0.378K) by developing a distance-aware GATv2 imputation pipeline in PyTorch Geometric for CMIP6 climate data across 2,664 grid cells.",
       "Ran ablation experiments across 9 GATv2 architectures, narrowing the gap to GraphEM to 1% and identifying land-ocean features and multi-head attention as the most impactful design choices.",
-      "Optimized GPU inference to reduce runtime from 3,745s to 1.06s per ensemble, enabling near-real-time climate reconstruction.",
     ],
   },
   {
@@ -30,10 +30,10 @@ const jobs = [
     location: "Almaty, Kazakhstan",
     current: false,
     bullets: [
-      "Lifted 10–15% Gini and 5–10% KPI by owning end-to-end ML product delivery — scoping, feature engineering, training, validation, and production deployment of credit scoring systems.",
-      "Cut 40–60% ML iteration time by building an automated pipeline (Python, SQL, LightGBM, SHAP, Airflow) from raw data to monitored production models.",
-      "Shipped a multi-agent LangChain system with tool-augmented retrieval that reduced call center knowledge lookup time by 30–50%; deployed as an internal product used daily by staff.",
-      "Reduced 25–45% manual review time by productionizing an LLM document summarization agent over high-volume internal document flows.",
+      "Built and deployed a customer-facing Voice AI Agent automating 90% of debt collection outbound calls; gathered operator feedback, presented results to stakeholders, and led technical demos for partner banks that adopted the solution.",
+      "Lifted credit scoring Gini 10-15% and KPI 5-10% by owning end-to-end ML delivery across production deployments.",
+      "Reduced customer query resolution time 30-50% by building and deploying a LangGraph AI Agent with RAG, memory, and tool-calling, used by 250+ operators bank-wide during live customer calls.",
+      "Cut manual review time 25-45% by productionizing an LLM document summarization agent across high-volume internal flows.",
     ],
   },
   {
@@ -43,8 +43,8 @@ const jobs = [
     location: "Almaty, Kazakhstan",
     current: false,
     bullets: [
-      "Built a decision tree model on 120K+ customer records to identify the top 5 drivers of churn, informing retention actions that reduced customer churn by 8%.",
-      "Built customer profiling datasets in SQL by joining production tables and engineering segmentation features for targeted marketing campaigns.",
+      "Reduced customer churn by 8% by building a decision tree on 120K+ customer records to identify the top 5 drivers of churn.",
+      "Engineered customer-profiling datasets in BigQuery SQL across production tables, enabling targeted marketing campaigns that increased response rates by 15%.",
     ],
   },
 ];
