@@ -23,7 +23,9 @@ const ACHIEVEMENTS = [
     title: "Enterprise Agent Jam NYC",
     place: "1st Place Winner @ Veris AI, New York",
     photos: [
-      { src: "/hackathon/veris-team.jpg", caption: "Team LeadGuard @ Veris AI NYC" },
+      { src: "/hackathon/veris-1.jpg", caption: "Team LeadGuard @ Veris AI NYC" },
+      { src: "/hackathon/veris-2.jpg", caption: "Enterprise Agent Jam NYC — Veris AI" },
+      { src: "/hackathon/veris-3.jpg", caption: "1st Place — LeadGuard" },
     ],
   },
 ];
