@@ -5,19 +5,38 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const ROLES = ["ML Engineer", "AI Engineer", "Data Scientist", "LLM Builder"];
 
-const PHOTOS = [
-  { src: "/profile2.png", caption: "Daniyar Abykhanov — ML/AI Engineer" },
-  { src: "/hackathon/team.png", caption: "Team TreeRoute @ NYU Tandon" },
-  { src: "/hackathon/presentation.png", caption: "Presenting our architecture to the audience" },
-  { src: "/hackathon/group1.png", caption: "Google Build With AI Hackathon 2026" },
-  { src: "/hackathon/group2.png", caption: "All participants @ NYU Tandon" },
+const ACHIEVEMENTS = [
+  {
+    label: "Google Build With AI 2026",
+    title: "Google Build With AI Hackathon 2026",
+    place: "1st Place Winner @ NYU Tandon, New York",
+    photos: [
+      { src: "/profile2.png", caption: "Daniyar Abykhanov — ML/AI Engineer" },
+      { src: "/hackathon/team.png", caption: "Team TreeRoute @ NYU Tandon" },
+      { src: "/hackathon/presentation.png", caption: "Presenting our architecture to the audience" },
+      { src: "/hackathon/group1.png", caption: "Google Build With AI Hackathon 2026" },
+      { src: "/hackathon/group2.png", caption: "All participants @ NYU Tandon" },
+    ],
+  },
+  {
+    label: "Enterprise Agent Jam NYC",
+    title: "Enterprise Agent Jam NYC",
+    place: "1st Place Winner @ Veris AI, New York",
+    photos: [
+      { src: "/hackathon/veris-team.jpg", caption: "Team LeadGuard @ Veris AI NYC" },
+    ],
+  },
 ];
 
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
   const [text, setText] = useState("");
   const [erasing, setErasing] = useState(false);
+  const [achievementIdx, setAchievementIdx] = useState(0);
   const [photoIdx, setPhotoIdx] = useState(0);
+
+  const achievement = ACHIEVEMENTS[achievementIdx];
+  const photos = achievement.photos;
 
   // Typing animation
   useEffect(() => {
@@ -42,9 +61,15 @@ export default function Hero() {
 
   // Auto-advance photos
   useEffect(() => {
-    const t = setInterval(() => setPhotoIdx((i) => (i + 1) % PHOTOS.length), 5000);
+    const t = setInterval(() => setPhotoIdx((i) => (i + 1) % photos.length), 5000);
     return () => clearInterval(t);
-  }, []);
+  }, [photos.length, achievementIdx]);
+
+  // Reset photo index when switching achievement
+  function switchAchievement(idx: number) {
+    setAchievementIdx(idx);
+    setPhotoIdx(0);
+  }
 
   return (
     <section
@@ -139,28 +164,47 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT — Hackathon featured */}
+        {/* RIGHT — Featured Achievements */}
         <div>
-          {/* Header */}
-          <div className="mb-4">
-            <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-1">
-              Featured Achievement
-            </p>
-            <h3 className="text-white text-lg font-bold">
-              Google Build With AI Hackathon 2026
-            </h3>
+          {/* Label */}
+          <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-3">
+            Featured Achievements
+          </p>
+
+          {/* Tab switcher */}
+          <div className="flex gap-2 mb-4">
+            {ACHIEVEMENTS.map((a, i) => (
+              <button
+                key={i}
+                onClick={() => switchAchievement(i)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                  achievementIdx === i
+                    ? "bg-green-500 text-white"
+                    : "border border-white/20 text-white/50 hover:border-green-500/50 hover:text-white/80"
+                }`}
+              >
+                🏆 {a.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Achievement header */}
+          <div className="mb-3">
+            <h3 className="text-white text-lg font-bold">{achievement.title}</h3>
             <div className="flex items-center gap-2 mt-1">
-              <span className="text-base">🏆</span>
+              <span className="text-base">🥇</span>
               <span className="text-green-400 text-sm font-semibold">
-                1st Place Winner @ NYU Tandon, New York
+                {achievement.place}
               </span>
             </div>
           </div>
 
           {/* Photo carousel */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900"
-               style={{ aspectRatio: "16/10" }}>
-            {PHOTOS.map((photo, i) => (
+          <div
+            className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900"
+            style={{ aspectRatio: "16/10" }}
+          >
+            {photos.map((photo, i) => (
               <div
                 key={photo.src}
                 className={`absolute inset-0 transition-opacity duration-700 ${
@@ -181,35 +225,41 @@ export default function Hero() {
               </div>
             ))}
 
-            {/* Arrows */}
-            <button
-              onClick={() => setPhotoIdx((i) => (i - 1 + PHOTOS.length) % PHOTOS.length)}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors z-10 text-lg leading-none"
-              aria-label="Previous"
-            >
-              ‹
-            </button>
-            <button
-              onClick={() => setPhotoIdx((i) => (i + 1) % PHOTOS.length)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors z-10 text-lg leading-none"
-              aria-label="Next"
-            >
-              ›
-            </button>
-
-            {/* Dots */}
-            <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-1.5 z-10">
-              {PHOTOS.map((_, i) => (
+            {/* Arrows — only show when multiple photos */}
+            {photos.length > 1 && (
+              <>
                 <button
-                  key={i}
-                  onClick={() => setPhotoIdx(i)}
-                  className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                    i === photoIdx ? "bg-white" : "bg-white/35"
-                  }`}
-                  aria-label={`Photo ${i + 1}`}
-                />
-              ))}
-            </div>
+                  onClick={() => setPhotoIdx((i) => (i - 1 + photos.length) % photos.length)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors z-10 text-lg leading-none"
+                  aria-label="Previous"
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={() => setPhotoIdx((i) => (i + 1) % photos.length)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors z-10 text-lg leading-none"
+                  aria-label="Next"
+                >
+                  ›
+                </button>
+              </>
+            )}
+
+            {/* Dots — only show when multiple photos */}
+            {photos.length > 1 && (
+              <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-1.5 z-10">
+                {photos.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setPhotoIdx(i)}
+                    className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                      i === photoIdx ? "bg-white" : "bg-white/35"
+                    }`}
+                    aria-label={`Photo ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
